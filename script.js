@@ -1,5 +1,5 @@
 /* const tag = document.createElement('script');
-tag.src = 'https://cdn.jsdelivr.net/gh/rkgttr/mc@8/script.js';
+tag.src = 'https://cdn.jsdelivr.net/gh/rkgttr/mc@9/script.js';
 const firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -34,15 +34,16 @@ const init = ()=>{
   link3.href =
     'https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap';
   head.appendChild(link3);
-  addCss('https://cdn.jsdelivr.net/gh/rkgttr/mc@8/new.css');
+  addCss('https://cdn.jsdelivr.net/gh/rkgttr/mc@9/new.css');
   document.body.innerHTML = document.body.innerHTML.replace('Maison Haute', 'Mountain Collection');
-  document.querySelector(
+  const map = document.querySelector(
     'img[src="https://www.maisonhaute.com/UserFiles/local-miniatures/UserFiles/File/organisme/UserFiles-maisonhaute/File/thumbresize/1400-1000/Carte-CDA-2022.jpg"]'
-  )?.src = 'https://cdn.jsdelivr.net/gh/rkgttr/mc@8/Carte-CDA-2022.png';
+  );
+  if (map) {map.src = 'https://cdn.jsdelivr.net/gh/rkgttr/mc@9/Carte-CDA-2022.png';}
   
   document.querySelectorAll(
     'img[src*="logo-header"], img[src*="logo-footer"]'
-  ).forEach(i => i?.src =
-    'https://cdn.jsdelivr.net/gh/rkgttr/mc@8/Logo_Def_Master_Fond_Bleu.png');
+  ).forEach(i => i.src =
+    'https://cdn.jsdelivr.net/gh/rkgttr/mc@9/Logo_Def_Master_Fond_Bleu.png');
 }
 init();
