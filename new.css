@@ -26758,6 +26758,7 @@ a.mdc-list-item {
     border-radius: 30px;
     padding: 12px 30px;
     height: auto;
+    color: #fff;
     text-align: center;
     display: inline-block
   }
